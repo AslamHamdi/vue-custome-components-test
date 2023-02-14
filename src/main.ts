@@ -3,7 +3,8 @@ import { createApp } from 'vue'
 // @ts-ignore  
 import mindlens from 'mindlens-components'
 import 'mindlens-components/styles.css'
-import './style.css'
+//import './style.css'
+import './css/tailwind.css'
 import App from './App.vue'
 
 createApp(App)
