@@ -1,69 +1,77 @@
 
 
 <template>
-<div class="w-full h-full flex items-center justify-center" style="padding-top: 100px; padding-bottom: 100px;">
+<div class="w-full h-full" style="padding-top: 100px; padding-bottom: 100px;">
     <div>
+      <div class="content-center h-fit p-8">
+        <h1 class="font-bold text-2xl flex items-center justify-center">Vue 3 Custom components</h1>
+        <h3 class="flex items-center justify-center pt-2">Click the button below to fire the alert !</h3>
+        <div class="flex items-center justify-center">
+          <span class="flex items-center justify-center text-4xl pt-2">👇</span>
+        </div>
+      </div>
+
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button variation="right-icon-text"/>
-        <ml-button variation="left-icon-text"/>
-        <ml-button variation="text-only"/>
-        <ml-button variation="icon-only"/>
+        <ml-button variation="right-icon-text" @click="showAlert('info', 'all')"/>
+        <ml-button variation="left-icon-text" @click="showAlert('info', 'title-content')"/>
+        <ml-button variation="text-only" @click="showAlert('info', 'content-only')"/>
+        <ml-button variation="icon-only" @click="showAlert('info', 'title-only')"/>
         <ml-button variation="text-only" state="disabled" text="Disabled"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button variation="right-icon-text" type2="error"/>
-        <ml-button variation="left-icon-text" type2="error"/>
-        <ml-button variation="text-only" type2="error"/>
-        <ml-button variation="icon-only" type2="error"/>
+        <ml-button variation="right-icon-text" type2="error" @click="showAlert('error', 'all')"/>
+        <ml-button variation="left-icon-text" type2="error" @click="showAlert('error', 'title-content')"/>
+        <ml-button variation="text-only" type2="error" @click="showAlert('error', 'content-only')"/>
+        <ml-button variation="icon-only" type2="error" @click="showAlert('error', 'title-only')"/>
         <ml-button variation="text-only" state="disabled" text="Disabled" type2="error"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button variation="right-icon-text" type2="warning"/>
-        <ml-button variation="left-icon-text" type2="warning"/>
-        <ml-button variation="text-only" type2="warning"/>
-        <ml-button variation="icon-only" type2="warning"/>
+        <ml-button variation="right-icon-text" type2="warning" @click="showAlert('warning', 'all')"/>
+        <ml-button variation="left-icon-text" type2="warning" @click="showAlert('warning', 'title-content')"/>
+        <ml-button variation="text-only" type2="warning" @click="showAlert('warning', 'content-only')"/>
+        <ml-button variation="icon-only" type2="warning" @click="showAlert('warning', 'title-only')"/>
         <ml-button variation="text-only" state="disabled" text="Disabled" type2="warning"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button variation="right-icon-text" type2="success"/>
-        <ml-button variation="left-icon-text" type2="success"/>
-        <ml-button variation="text-only" type2="success"/>
-        <ml-button variation="icon-only" type2="success"/>
+        <ml-button variation="right-icon-text" type2="success" @click="showAlert('success', 'all')"/>
+        <ml-button variation="left-icon-text" type2="success" @click="showAlert('success', 'title-content')"/>
+        <ml-button variation="text-only" type2="success" @click="showAlert('success', 'content-only')"/>
+        <ml-button variation="icon-only" type2="success" @click="showAlert('success', 'title-only')"/>
         <ml-button variation="text-only" state="disabled" text="Disabled" type2="success"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button type="secondary" variation="right-icon-text"/>
-        <ml-button type="secondary" variation="left-icon-text"/>
-        <ml-button type="secondary" variation="text-only"/>
-        <ml-button type="secondary" variation="icon-only"/>
+        <ml-button type="secondary" variation="right-icon-text" @click="showAlert('info', 'all')"/>
+        <ml-button type="secondary" variation="left-icon-text" @click="showAlert('info', 'title-content')"/>
+        <ml-button type="secondary" variation="text-only" @click="showAlert('info', 'content-only')"/>
+        <ml-button type="secondary" variation="icon-only" @click="showAlert('info', 'title-only')"/>
         <ml-button type="secondary" variation="text-only" state="disabled" text="Disabled"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button type="secondary" variation="right-icon-text" type2="error"/>
-        <ml-button type="secondary" variation="left-icon-text" type2="error"/>
-        <ml-button type="secondary" variation="text-only" type2="error"/>
-        <ml-button type="secondary" variation="icon-only" type2="error"/>
+        <ml-button type="secondary" variation="right-icon-text" type2="error" @click="showAlert('error', 'all')"/>
+        <ml-button type="secondary" variation="left-icon-text" type2="error" @click="showAlert('error', 'title-content')"/>
+        <ml-button type="secondary" variation="text-only" type2="error" @click="showAlert('error', 'content-only')"/>
+        <ml-button type="secondary" variation="icon-only" type2="error" @click="showAlert('error', 'title-only')"/>
         <ml-button type="secondary" variation="text-only" state="disabled" text="Disabled" type2="error"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button type="secondary" variation="right-icon-text" type2="warning"/>
-        <ml-button type="secondary" variation="left-icon-text" type2="warning"/>
-        <ml-button type="secondary" variation="text-only" type2="warning"/>
-        <ml-button type="secondary" variation="icon-only" type2="warning"/>
+        <ml-button type="secondary" variation="right-icon-text" type2="warning" @click="showAlert('warning', 'all')"/>
+        <ml-button type="secondary" variation="left-icon-text" type2="warning" @click="showAlert('warning', 'title-content')"/>
+        <ml-button type="secondary" variation="text-only" type2="warning" @click="showAlert('warning', 'content-only')"/>
+        <ml-button type="secondary" variation="icon-only" type2="warning" @click="showAlert('warning', 'title-only')"/>
         <ml-button type="secondary" variation="text-only" state="disabled" text="Disabled" type2="warning"/>
       </div>
 
       <div class="flex justify-center items-center space-x-8 h-fit p-8">
-        <ml-button type="secondary" variation="right-icon-text" type2="success"/>
-        <ml-button type="secondary" variation="left-icon-text" type2="success"/>
-        <ml-button type="secondary" variation="text-only" type2="success"/>
-        <ml-button type="secondary" variation="icon-only" type2="success"/>
+        <ml-button type="secondary" variation="right-icon-text" type2="success" @click="showAlert('success', 'all')"/>
+        <ml-button type="secondary" variation="left-icon-text" type2="success" @click="showAlert('success', 'title-content')"/>
+        <ml-button type="secondary" variation="text-only" type2="success" @click="showAlert('success', 'content-only')"/>
+        <ml-button type="secondary" variation="icon-only" type2="success" @click="showAlert('success', 'title-only')"/>
         <ml-button type="secondary" variation="text-only" state="disabled" text="Disabled" type2="success"/>
       </div>
 
@@ -126,7 +134,16 @@
 
     },
     methods: {
-
+      showAlert(type: string, variation: string){
+        this.mlAlert({
+            header: 'This is header',
+            type: type,
+            variation: variation,
+            content: 'This is a content. Content is a subject or ideas contained in something written, said, created, or represented',
+            textButton1: "Btn 1",
+            textButton2: "Btn 2"
+        })
+      },
     }
 }
 </script>
