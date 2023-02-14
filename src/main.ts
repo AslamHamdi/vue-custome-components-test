@@ -8,5 +8,5 @@ import './css/tailwind.css'
 import App from './App.vue'
 
 createApp(App)
-.use(mindlens)
+.use(mindlens as any)
 .mount('#app')
