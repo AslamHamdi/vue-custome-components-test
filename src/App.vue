@@ -106,7 +106,7 @@
 
 </style>
 
-<script lang="ts">
+<script>
   export default {
     inject: ['MLAlert'],
     setup(){
@@ -134,7 +134,7 @@
 
     },
     methods: {
-      showAlert(type: string, variation: string){
+      showAlert(type, variation){
         this.mlAlert({
             header: 'This is header',
             type: type,
